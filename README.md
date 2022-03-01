@@ -43,7 +43,7 @@ S3 is used to store your data on internet. In layman terms
 * Imagine  a Folder in your C drive. Just that the Folder is present on internet.
 * Imagine a Directory on your UNIX/UBUNTU server, just that the directory is on internet.
 
-![alt text](https://github.com/anjanpaul/Portainer-ECR/blob/main/Output/Screenshot%202022-02-10%20at%2011.11.37%20AM.png)
+![alt text](https://github.com/anjanpaul/S3-boto3-/blob/main/screenshoot/s3.png)
 
 * You can store your personal files \( Photos, videos, documents \).
 
