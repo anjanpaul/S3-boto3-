@@ -739,12 +739,75 @@ if __name__ == "__main__":
 
 The largest object that can be uploaded in a single PUT is 5 gigabytes. For objects larger than 100 megabytes, [Multipart Upload](http://docs.amazonwebservices.com/AmazonS3/latest/dev/UploadingObjects.html) is an option
 
-# S3 Analytics
+# S3 Inventory
 
 ---
 
-S3 analytics
+# 
 
-##### Create analytics
+# WebSite Hosting on S3
+
+---
+
+AWS S3 bucket can also be used for hosting static websites.
+
+Set up a website for an S3 bucket
+
+##### Create Website
+
+```py
+"""
+- Hack   : Set up a website for an S3 bucket
+- AWS CLI: aws s3api put-bucket-website --bucket us-west-2.nag --website-configuration  file://./website.json
+[ Copy the below policy to f.json ]
+"""
+
+import json
+import boto3
+
+p = {
+    "IndexDocument": {
+        "Suffix": "index.html"
+    }
+}
+
+if __name__ == "__main__":
+    client = boto3.client('s3')
+    bucketname = "us-west-2.nag"
+    print client.put_bucket_website(Bucket=bucketname, WebsiteConfiguration=p)
+```
+
+##### Get Website
+
+```py
+"""
+- Hack   : Get the website configuration of an S3 bucket
+- AWS CLI: aws s3api get-bucket-website --bucket us-west-2.nag
+"""
+
+import json
+import boto3
+
+if __name__ == "__main__":
+    client = boto3.client('s3')
+    bucketname = "us-west-2.nag"
+    print client.get_bucket_website(Bucket=bucketname)
+```
+
+##### Delete Website
 
 ```
+"""
+- Hack   : Delete website configuration for an S3 bucket
+- AWS CLI: aws s3api delete-bucket-website --bucket us-west-2.nag
+"""
+
+import json
+import boto3
+
+if __name__ == "__main__":
+    client = boto3.client('s3')
+    bucketname = "us-west-2.nag"
+    print client.delete_bucket_website(Bucket=bucketname)
+```
+
