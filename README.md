@@ -32,7 +32,9 @@
 * [S3 Security & Tools](#s3-security-and-tools)
   * [Security Monkey](#security-monkey)
 
-You can checkout all the examples in this book at [https://github.com/nagwww/101-AWS-S3-Hacks](https://github.com/nagwww/101-AWS-S3-Hacks)
+# What is S3
+
+---
 
 S3 stands for **S**imple **S**torage **S**ervice. An Amazon service which was released on
 
@@ -42,7 +44,6 @@ S3 is used to store your data on internet. In layman terms
 
 * Imagine  a Folder in your C drive. Just that the Folder is present on internet.
 * Imagine a Directory on your UNIX/UBUNTU server, just that the directory is on internet.
-
 ![alt text](https://github.com/anjanpaul/S3-boto3-/blob/main/screenshoot/s3.png)
 
 * You can store your personal files \( Photos, videos, documents \).
